@@ -68,8 +68,10 @@ async function importFreshBackgroundUpdateCheck(): Promise<typeof import("./back
     showAutoUpdatedToast: mockShowAutoUpdatedToast,
   }))
   mock.module("../../../shared/logger", () => ({ log: () => {} }))
-  getOpenCodeCacheDirSpy = spyOn(shared, "getOpenCodeCacheDir").mockReturnValue(TEST_CACHE_DIR)
-  getOpenCodeConfigPathsSpy = spyOn(shared, "getOpenCodeConfigPaths").mockReturnValue({
+  getOpenCodeCacheDirSpy = spyOn(shared, "getOpenCodeCacheDir")
+  getOpenCodeCacheDirSpy.mockReturnValue(TEST_CACHE_DIR)
+  getOpenCodeConfigPathsSpy = spyOn(shared, "getOpenCodeConfigPaths")
+  getOpenCodeConfigPathsSpy.mockReturnValue({
     configDir: TEST_CONFIG_DIR,
     configJson: join(TEST_CONFIG_DIR, "opencode.json"),
     configJsonc: join(TEST_CONFIG_DIR, "opencode.jsonc"),
@@ -94,9 +96,9 @@ async function importFreshBackgroundUpdateCheck(): Promise<typeof import("./back
     getDataDir: () => join(TEST_DIR, "data"),
     getOpenCodeStorageDir: () => join(TEST_DIR, "data", "opencode", "storage"),
     getCacheDir: () => TEST_DIR,
-    getOmoOpenCodeCacheDir: () => join(TEST_DIR, "oh-my-opencode"),
-    getOpenCodeCacheDir: () => TEST_CACHE_DIR,
-  }))
+      getOpencodeAgentOrchestratorCacheDir: () => join(TEST_DIR, "oh-my-opencode"),
+      getOpenCodeCacheDir: () => TEST_CACHE_DIR,
+    }))
   mock.module("../../../shared/opencode-config-dir", () => ({
     getOpenCodeConfigDir: () => TEST_CONFIG_DIR,
     getOpenCodeConfigPaths: () => ({

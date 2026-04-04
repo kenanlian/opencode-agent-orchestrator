@@ -1,6 +1,7 @@
 import * as path from "node:path"
 import * as os from "node:os"
 import { accessSync, constants, mkdirSync } from "node:fs"
+import { CACHE_DIR_NAME } from "./plugin-identity"
 
 function resolveWritableDirectory(preferredDir: string, fallbackSuffix: string): string {
   try {
@@ -46,11 +47,11 @@ export function getCacheDir(): string {
 }
 
 /**
- * Returns the oh-my-opencode cache directory.
- * All platforms: ~/.cache/oh-my-opencode
+ * Returns the OpenCode Agent Orchestrator cache directory.
+ * All platforms: ~/.cache/opencode-agent-orchestrator
  */
-export function getOmoOpenCodeCacheDir(): string {
-  return path.join(getCacheDir(), "oh-my-opencode")
+export function getOpencodeAgentOrchestratorCacheDir(): string {
+  return path.join(getCacheDir(), CACHE_DIR_NAME)
 }
 
 /**

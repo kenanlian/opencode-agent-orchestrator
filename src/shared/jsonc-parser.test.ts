@@ -268,10 +268,10 @@ describe("detectConfigFile", () => {
 describe("detectPluginConfigFile", () => {
   const testDir = join(__dirname, ".test-detect-plugin")
 
-  test("prefers oh-my-openagent over oh-my-opencode when both jsonc files exist", () => {
+  test("prefers opencode-agent-orchestrator over oh-my-opencode when both jsonc files exist", () => {
     // given
     if (!existsSync(testDir)) mkdirSync(testDir, { recursive: true })
-    writeFileSync(join(testDir, "oh-my-openagent.jsonc"), "{}")
+    writeFileSync(join(testDir, "opencode-agent-orchestrator.jsonc"), "{}")
     writeFileSync(join(testDir, "oh-my-opencode.jsonc"), "{}")
 
     // when
@@ -279,13 +279,13 @@ describe("detectPluginConfigFile", () => {
 
     // then
     expect(result.format).toBe("jsonc")
-    expect(result.path).toBe(join(testDir, "oh-my-openagent.jsonc"))
+    expect(result.path).toBe(join(testDir, "opencode-agent-orchestrator.jsonc"))
     expect(result.legacyPath).toBe(join(testDir, "oh-my-opencode.jsonc"))
 
     rmSync(testDir, { recursive: true, force: true })
   })
 
-  test("falls back to oh-my-opencode when oh-my-openagent doesn't exist", () => {
+  test("falls back to oh-my-opencode when opencode-agent-orchestrator doesn't exist", () => {
     // given
     if (!existsSync(testDir)) mkdirSync(testDir, { recursive: true })
     writeFileSync(join(testDir, "oh-my-opencode.jsonc"), "{}")
@@ -301,10 +301,10 @@ describe("detectPluginConfigFile", () => {
     rmSync(testDir, { recursive: true, force: true })
   })
 
-  test("loads oh-my-openagent.json before oh-my-opencode.json when no jsonc exists", () => {
+  test("loads opencode-agent-orchestrator.json before oh-my-opencode.json when no jsonc exists", () => {
     // given
     if (!existsSync(testDir)) mkdirSync(testDir, { recursive: true })
-    writeFileSync(join(testDir, "oh-my-openagent.json"), "{}")
+    writeFileSync(join(testDir, "opencode-agent-orchestrator.json"), "{}")
     writeFileSync(join(testDir, "oh-my-opencode.json"), "{}")
 
     // when
@@ -312,7 +312,7 @@ describe("detectPluginConfigFile", () => {
 
     // then
     expect(result.format).toBe("json")
-    expect(result.path).toBe(join(testDir, "oh-my-openagent.json"))
+    expect(result.path).toBe(join(testDir, "opencode-agent-orchestrator.json"))
     expect(result.legacyPath).toBe(join(testDir, "oh-my-opencode.json"))
 
     rmSync(testDir, { recursive: true, force: true })
@@ -328,7 +328,7 @@ describe("detectPluginConfigFile", () => {
 
     // then
     expect(result.format).toBe("none")
-    expect(result.path).toBe(join(emptyDir, "oh-my-openagent.json"))
+    expect(result.path).toBe(join(emptyDir, "opencode-agent-orchestrator.json"))
 
     rmSync(testDir, { recursive: true, force: true })
   })
@@ -337,30 +337,30 @@ describe("detectPluginConfigFile", () => {
     // given
     if (!existsSync(testDir)) mkdirSync(testDir, { recursive: true })
     writeFileSync(join(testDir, "oh-my-opencode.json"), "{}")
-    writeFileSync(join(testDir, "oh-my-openagent.jsonc"), "{}")
+    writeFileSync(join(testDir, "opencode-agent-orchestrator.jsonc"), "{}")
 
     // when
     const result = detectPluginConfigFile(testDir)
 
     // then
     expect(result.format).toBe("jsonc")
-    expect(result.path).toBe(join(testDir, "oh-my-openagent.jsonc"))
+    expect(result.path).toBe(join(testDir, "opencode-agent-orchestrator.jsonc"))
     expect(result.legacyPath).toBe(join(testDir, "oh-my-opencode.json"))
 
     rmSync(testDir, { recursive: true, force: true })
   })
 
-  test("loads oh-my-openagent when only canonical jsonc exists", () => {
+  test("loads opencode-agent-orchestrator when only canonical jsonc exists", () => {
     // given
     if (!existsSync(testDir)) mkdirSync(testDir, { recursive: true })
-    writeFileSync(join(testDir, "oh-my-openagent.jsonc"), "{}")
+    writeFileSync(join(testDir, "opencode-agent-orchestrator.jsonc"), "{}")
 
     // when
     const result = detectPluginConfigFile(testDir)
 
     // then
     expect(result.format).toBe("jsonc")
-    expect(result.path).toBe(join(testDir, "oh-my-openagent.jsonc"))
+    expect(result.path).toBe(join(testDir, "opencode-agent-orchestrator.jsonc"))
     expect(result.legacyPath).toBeUndefined()
 
     rmSync(testDir, { recursive: true, force: true })

@@ -99,7 +99,7 @@ describe("createLegacyPluginToastHook", () => {
       mockAutoMigrate.mockReturnValue({
         migrated: true,
         from: "oh-my-opencode",
-        to: "oh-my-openagent",
+        to: "@kenanlian/opencode-agent-orchestrator",
         configPath: "/tmp/opencode.json",
       })
       const { createLegacyPluginToastHook } = await importFreshModule()
@@ -153,7 +153,7 @@ describe("createLegacyPluginToastHook", () => {
       mockAutoMigrate.mockReturnValue({
         migrated: true,
         from: "oh-my-opencode",
-        to: "oh-my-openagent",
+        to: "@kenanlian/opencode-agent-orchestrator",
         configPath: "/tmp/opencode.json",
       })
       const { createLegacyPluginToastHook } = await importFreshModule()

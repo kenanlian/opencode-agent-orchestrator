@@ -1,6 +1,7 @@
 import { existsSync, realpathSync } from "node:fs"
 import { homedir } from "node:os"
 import { join, resolve, win32 } from "node:path"
+import { CONFIG_BASENAME } from "./plugin-identity"
 
 import type {
   OpenCodeBinaryType,
@@ -97,7 +98,7 @@ export function getOpenCodeConfigPaths(options: OpenCodeConfigDirOptions): OpenC
     configJson: join(configDir, "opencode.json"),
     configJsonc: join(configDir, "opencode.jsonc"),
     packageJson: join(configDir, "package.json"),
-    omoConfig: join(configDir, "oh-my-opencode.json"),
+    omoConfig: join(configDir, `${CONFIG_BASENAME}.json`),
   }
 }
 

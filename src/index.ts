@@ -13,16 +13,17 @@ import { createPluginDispose, type PluginDispose } from "./plugin-dispose"
 import { loadPluginConfig } from "./plugin-config"
 import { createModelCacheState } from "./plugin-state"
 import { createFirstMessageVariantGate } from "./shared/first-message-variant"
-import { injectServerAuthIntoClient, log, logLegacyPluginStartupWarning } from "./shared"
+import { injectServerAuthIntoClient, log, logLegacyPluginStartupWarning, migrateLegacyRuntimePaths } from "./shared"
 import { detectExternalSkillPlugin, getSkillPluginConflictWarning } from "./shared/external-plugin-detector"
 import { lspManager } from "./tools/lsp/client"
 import { startTmuxCheck } from "./tools"
 
 let activePluginDispose: PluginDispose | null = null
 
-const OhMyOpenCodePlugin: Plugin = async (ctx) => {
+const OpenCodeAgentOrchestratorPlugin: Plugin = async (ctx) => {
   initConfigContext("opencode", null)
-  log("[OhMyOpenCodePlugin] ENTRY - plugin loading", {
+  migrateLegacyRuntimePaths()
+  log("[OpenCodeAgentOrchestratorPlugin] ENTRY - plugin loading", {
     directory: ctx.directory,
   })
   logLegacyPluginStartupWarning()
@@ -95,7 +96,7 @@ const OhMyOpenCodePlugin: Plugin = async (ctx) => {
   activePluginDispose = dispose
 
   return {
-    name: "oh-my-openagent",
+    name: "@kenanlian/opencode-agent-orchestrator",
     ...pluginInterface,
 
     "experimental.session.compacting": async (
@@ -115,10 +116,11 @@ const OhMyOpenCodePlugin: Plugin = async (ctx) => {
   }
 }
 
-export default OhMyOpenCodePlugin
+export default OpenCodeAgentOrchestratorPlugin
 
 export type {
-  OhMyOpenCodeConfig,
+  OpenCodeAgentOrchestratorConfig,
+  OpenCodeAgentOrchestratorConfig as OhMyOpenCodeConfig,
   AgentName,
   AgentOverrideConfig,
   AgentOverrides,

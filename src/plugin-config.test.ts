@@ -309,11 +309,11 @@ describe("loadPluginConfig", () => {
     mkdirSync(projectConfigDir, { recursive: true })
 
     writeFileSync(
-      join(userConfigDir, "oh-my-openagent.jsonc"),
+      join(userConfigDir, "opencode-agent-orchestrator.jsonc"),
       JSON.stringify({ mcp_env_allowlist: ["USER_ONLY_TOKEN"] })
     )
     writeFileSync(
-      join(projectConfigDir, "oh-my-openagent.jsonc"),
+      join(projectConfigDir, "opencode-agent-orchestrator.jsonc"),
       JSON.stringify({ mcp_env_allowlist: ["PROJECT_TOKEN"] })
     )
 
@@ -334,7 +334,7 @@ describe("loadPluginConfig", () => {
     const projectConfigDir = join(projectDir, ".opencode")
     const legacyConfigPath = join(projectConfigDir, "oh-my-opencode.jsonc")
     const backupConfigPath = `${legacyConfigPath}.bak`
-    const canonicalConfigPath = join(projectConfigDir, "oh-my-openagent.jsonc")
+    const canonicalConfigPath = join(projectConfigDir, "opencode-agent-orchestrator.jsonc")
 
     tempDirs.push(rootDir)
     mkdirSync(userConfigDir, { recursive: true })
@@ -362,7 +362,7 @@ describe("loadPluginConfig", () => {
     const projectDir = join(rootDir, "project")
     const projectConfigDir = join(projectDir, ".opencode")
     const legacyConfigPath = join(projectConfigDir, "oh-my-opencode.jsonc")
-    const canonicalConfigPath = join(projectConfigDir, "oh-my-openagent.jsonc")
+    const canonicalConfigPath = join(projectConfigDir, "opencode-agent-orchestrator.jsonc")
 
     tempDirs.push(rootDir)
     mkdirSync(userConfigDir, { recursive: true })

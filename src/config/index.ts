@@ -1,9 +1,11 @@
 export {
-  OhMyOpenCodeConfigSchema,
+  OpenCodeAgentOrchestratorConfigSchema,
+  OpenCodeAgentOrchestratorConfigSchema as OhMyOpenCodeConfigSchema,
 } from "./schema"
 
 export type {
-  OhMyOpenCodeConfig,
+  OpenCodeAgentOrchestratorConfig,
+  OpenCodeAgentOrchestratorConfig as OhMyOpenCodeConfig,
   AgentOverrideConfig,
   AgentOverrides,
   McpName,

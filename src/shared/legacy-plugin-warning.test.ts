@@ -45,7 +45,7 @@ describe("checkForLegacyPluginEntry", () => {
 
   it("does not flag a canonical plugin entry", () => {
     // given
-    writeFileSync(join(testConfigDir, "opencode.json"), JSON.stringify({ plugin: ["oh-my-openagent"] }, null, 2))
+    writeFileSync(join(testConfigDir, "opencode.json"), JSON.stringify({ plugin: ["@kenanlian/opencode-agent-orchestrator"] }, null, 2))
 
     // when
     const result = checkForLegacyPluginEntry(testConfigDir)

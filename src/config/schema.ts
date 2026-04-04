@@ -15,7 +15,11 @@ export * from "./schema/git-master"
 export * from "./schema/hooks"
 export * from "./schema/model-capabilities"
 export * from "./schema/notification"
-export * from "./schema/oh-my-opencode-config"
+export * from "./schema/opencode-agent-orchestrator-config"
+export {
+  OpenCodeAgentOrchestratorConfigSchema as OhMyOpenCodeConfigSchema,
+  type OpenCodeAgentOrchestratorConfig as OhMyOpenCodeConfig,
+} from "./schema/opencode-agent-orchestrator-config"
 export * from "./schema/ralph-loop"
 export * from "./schema/runtime-fallback"
 export * from "./schema/skills"

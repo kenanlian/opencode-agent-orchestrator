@@ -175,7 +175,7 @@ export function loadPluginConfig(
   let userConfigPath =
     userDetected.format !== "none"
       ? userDetected.path
-      : path.join(configDir, "oh-my-opencode.json");
+      : path.join(configDir, `${CONFIG_BASENAME}.json`);
 
   if (userDetected.legacyPath) {
     log("Canonical plugin config detected alongside legacy config. Remove the legacy file to avoid confusion.", {
@@ -199,7 +199,7 @@ export function loadPluginConfig(
   let projectConfigPath =
     projectDetected.format !== "none"
       ? projectDetected.path
-      : path.join(projectBasePath, "oh-my-opencode.json");
+      : path.join(projectBasePath, `${CONFIG_BASENAME}.json`);
 
   if (projectDetected.legacyPath) {
     log("Canonical plugin config detected alongside legacy config. Remove the legacy file to avoid confusion.", {
