@@ -117,7 +117,7 @@ export function createCallOmoAgent(
 
       // Check if agent is disabled
       if (disabledAgents.some((disabled) => disabled.toLowerCase() === normalizedAgent)) {
-        return `Error: Agent "${normalizedAgent}" is disabled via disabled_agents configuration. Remove it from disabled_agents in your oh-my-opencode.json to use it.`
+        return `Error: Agent "${normalizedAgent}" is disabled via disabled_agents configuration. Remove it from disabled_agents in your opencode-agent-orchestrator.json to use it.`
       }
 
       const { model: resolvedModel, fallbackChain } = resolveModelAndFallbackChain({

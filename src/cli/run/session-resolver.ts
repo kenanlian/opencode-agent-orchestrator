@@ -26,7 +26,7 @@ export async function resolveSession(options: {
   for (let attempt = 1; attempt <= SESSION_CREATE_MAX_RETRIES; attempt++) {
     const res = await client.session.create({
       body: {
-        title: "oh-my-opencode run",
+        title: "opencode-agent-orchestrator run",
         permission: [
           { permission: "question", action: "deny" as const, pattern: "*" },
         ],

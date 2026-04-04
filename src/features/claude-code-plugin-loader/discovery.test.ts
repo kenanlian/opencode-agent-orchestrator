@@ -105,7 +105,7 @@ describe("discoverInstalledPlugins", () => {
   it("derives canonical package name from npm plugin keys", () => {
     //#given
     const pluginsHome = process.env.CLAUDE_PLUGINS_HOME as string
-    const installPath = join(createTemporaryDirectory("omo-plugin-install-"), "oh-my-openagent")
+  const installPath = join(createTemporaryDirectory("omo-plugin-install-"), "opencode-agent-orchestrator")
     mkdirSync(installPath, { recursive: true })
 
     const databasePath = join(pluginsHome, "installed_plugins.json")
@@ -114,7 +114,7 @@ describe("discoverInstalledPlugins", () => {
       JSON.stringify({
         version: 2,
         plugins: {
-          "oh-my-openagent@3.13.1": [
+    "@kenanlian/opencode-agent-orchestrator@3.13.1": [
             {
               scope: "user",
               installPath,
@@ -134,6 +134,6 @@ describe("discoverInstalledPlugins", () => {
     //#then
     expect(discovered.errors).toHaveLength(0)
     expect(discovered.plugins).toHaveLength(1)
-    expect(discovered.plugins[0]?.name).toBe("oh-my-openagent")
+  expect(discovered.plugins[0]?.name).toBe("@kenanlian/opencode-agent-orchestrator")
   })
 })

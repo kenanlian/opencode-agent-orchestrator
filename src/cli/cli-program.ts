@@ -16,14 +16,14 @@ const VERSION = packageJson.version
 const program = new Command()
 
 program
-  .name("oh-my-opencode")
+  .name("opencode-agent-orchestrator")
   .description("The ultimate OpenCode plugin - multi-model orchestration, LSP tools, and more")
   .version(VERSION, "-v, --version", "Show version number")
   .enablePositionalOptions()
 
 program
   .command("install")
-  .description("Install and configure oh-my-opencode with interactive setup")
+  .description("Install and configure OpenCode Agent Orchestrator with interactive setup")
   .option("--no-tui", "Run in non-interactive mode (requires all options)")
   .option("--claude <value>", "Claude subscription: no, yes, max20")
   .option("--openai <value>", "OpenAI/ChatGPT subscription: no, yes (default: no)")
@@ -36,9 +36,9 @@ program
   .option("--skip-auth", "Skip authentication setup hints")
   .addHelpText("after", `
 Examples:
-  $ bunx oh-my-opencode install
-  $ bunx oh-my-opencode install --no-tui --claude=max20 --openai=yes --gemini=yes --copilot=no
-  $ bunx oh-my-opencode install --no-tui --claude=no --gemini=no --copilot=yes --opencode-zen=yes
+  $ bunx @kenanlian/opencode-agent-orchestrator install
+  $ bunx @kenanlian/opencode-agent-orchestrator install --no-tui --claude=max20 --openai=yes --gemini=yes --copilot=no
+  $ bunx @kenanlian/opencode-agent-orchestrator install --no-tui --claude=no --gemini=no --copilot=yes --opencode-zen=yes
 
 Model Providers (Priority: Native > Copilot > OpenCode Zen > Z.ai > Kimi):
   Claude        Native anthropic/ models (Opus, Sonnet, Haiku)
@@ -83,20 +83,20 @@ program
   .option("--session-id <id>", "Resume existing session instead of creating new one")
   .addHelpText("after", `
 Examples:
-  $ bunx oh-my-opencode run "Fix the bug in index.ts"
-  $ bunx oh-my-opencode run --agent Sisyphus "Implement feature X"
-  $ bunx oh-my-opencode run --port 4321 "Fix the bug"
-  $ bunx oh-my-opencode run --attach http://127.0.0.1:4321 "Fix the bug"
-  $ bunx oh-my-opencode run --json "Fix the bug" | jq .sessionId
-  $ bunx oh-my-opencode run --on-complete "notify-send Done" "Fix the bug"
-  $ bunx oh-my-opencode run --session-id ses_abc123 "Continue the work"
-  $ bunx oh-my-opencode run --model anthropic/claude-sonnet-4 "Fix the bug"
-  $ bunx oh-my-opencode run --agent Sisyphus --model openai/gpt-5.4 "Implement feature X"
+  $ bunx @kenanlian/opencode-agent-orchestrator run "Fix the bug in index.ts"
+  $ bunx @kenanlian/opencode-agent-orchestrator run --agent Sisyphus "Implement feature X"
+  $ bunx @kenanlian/opencode-agent-orchestrator run --port 4321 "Fix the bug"
+  $ bunx @kenanlian/opencode-agent-orchestrator run --attach http://127.0.0.1:4321 "Fix the bug"
+  $ bunx @kenanlian/opencode-agent-orchestrator run --json "Fix the bug" | jq .sessionId
+  $ bunx @kenanlian/opencode-agent-orchestrator run --on-complete "notify-send Done" "Fix the bug"
+  $ bunx @kenanlian/opencode-agent-orchestrator run --session-id ses_abc123 "Continue the work"
+  $ bunx @kenanlian/opencode-agent-orchestrator run --model anthropic/claude-sonnet-4 "Fix the bug"
+  $ bunx @kenanlian/opencode-agent-orchestrator run --agent Sisyphus --model openai/gpt-5.4 "Implement feature X"
 
 Agent resolution order:
   1) --agent flag
   2) OPENCODE_DEFAULT_AGENT
-  3) oh-my-opencode.json "default_run_agent"
+  3) opencode-agent-orchestrator.json "default_run_agent"
   4) Sisyphus (fallback)
 
 Available core agents:
@@ -135,9 +135,9 @@ program
   .option("--json", "Output in JSON format for scripting")
   .addHelpText("after", `
 Examples:
-  $ bunx oh-my-opencode get-local-version
-  $ bunx oh-my-opencode get-local-version --json
-  $ bunx oh-my-opencode get-local-version --directory /path/to/project
+  $ bunx @kenanlian/opencode-agent-orchestrator get-local-version
+  $ bunx @kenanlian/opencode-agent-orchestrator get-local-version --json
+  $ bunx @kenanlian/opencode-agent-orchestrator get-local-version --directory /path/to/project
 
 This command shows:
   - Current installed version
@@ -156,16 +156,16 @@ This command shows:
 
 program
   .command("doctor")
-  .description("Check oh-my-opencode installation health and diagnose issues")
+  .description("Check OpenCode Agent Orchestrator installation health and diagnose issues")
   .option("--status", "Show compact system dashboard")
   .option("--verbose", "Show detailed diagnostic information")
   .option("--json", "Output results in JSON format")
   .addHelpText("after", `
 Examples:
-  $ bunx oh-my-opencode doctor            # Show problems only
-  $ bunx oh-my-opencode doctor --status   # Compact dashboard
-  $ bunx oh-my-opencode doctor --verbose  # Deep diagnostics
-  $ bunx oh-my-opencode doctor --json     # JSON output
+  $ bunx @kenanlian/opencode-agent-orchestrator doctor            # Show problems only
+  $ bunx @kenanlian/opencode-agent-orchestrator doctor --status   # Compact dashboard
+  $ bunx @kenanlian/opencode-agent-orchestrator doctor --verbose  # Deep diagnostics
+  $ bunx @kenanlian/opencode-agent-orchestrator doctor --json     # JSON output
 `)
   .action(async (options) => {
     const mode = options.status ? "status" : options.verbose ? "verbose" : "default"
@@ -180,7 +180,7 @@ Examples:
 program
   .command("refresh-model-capabilities")
   .description("Refresh the cached models.dev-based model capabilities snapshot")
-  .option("-d, --directory <path>", "Working directory to read oh-my-opencode config from")
+  .option("-d, --directory <path>", "Working directory to read opencode-agent-orchestrator config from")
   .option("--source-url <url>", "Override the models.dev source URL")
   .option("--json", "Output refresh summary as JSON")
   .action(async (options) => {
@@ -196,7 +196,7 @@ program
   .command("version")
   .description("Show version information")
   .action(() => {
-    console.log(`oh-my-opencode v${VERSION}`)
+    console.log(`opencode-agent-orchestrator v${VERSION}`)
   })
 
 program.addCommand(createMcpOAuthCommand())

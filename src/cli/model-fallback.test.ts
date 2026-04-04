@@ -559,7 +559,7 @@ describe("generateModelConfig", () => {
 
       // #then should include correct schema URL
       expect(result.$schema).toBe(
-        "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json"
+        "https://raw.githubusercontent.com/kenanlian/opencode-agent-orchestrator/dev/assets/opencode-agent-orchestrator.schema.json"
       )
     })
   })

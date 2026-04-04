@@ -1,6 +1,7 @@
 import { existsSync, readdirSync } from "node:fs"
 import { join } from "node:path"
 import { extractZip as extractZipBase } from "../../shared"
+import { getOpencodeAgentOrchestratorCacheDir } from "../../shared/data-path"
 import {
   cleanupArchive,
   downloadArchive,
@@ -38,8 +39,7 @@ function getPlatformKey(): string {
 }
 
 function getInstallDir(): string {
-  const homeDir = process.env.HOME || process.env.USERPROFILE || "."
-  return join(homeDir, ".cache", "oh-my-opencode", "bin")
+  return join(getOpencodeAgentOrchestratorCacheDir(), "bin")
 }
 
 function getRgPath(): string {

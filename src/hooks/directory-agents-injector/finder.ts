@@ -18,7 +18,7 @@ export function findAgentsMdUp(input: {
 
   while (true) {
     // Skip root AGENTS.md - OpenCode's system.ts already loads it via custom()
-    // See: https://github.com/code-yeongyu/oh-my-openagent/issues/379
+// See: https://github.com/kenanlian/opencode-agent-orchestrator/issues/379
     const isRootDir = current === input.rootDir;
     if (!isRootDir) {
       const agentsPath = join(current, AGENTS_FILENAME);

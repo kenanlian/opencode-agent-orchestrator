@@ -143,7 +143,7 @@ describe("system check", () => {
       const legacyEntryIssue = result.issues.find((issue) => issue.title === "Using legacy package name")
       expect(legacyEntryIssue?.severity).toBe("warning")
       expect(legacyEntryIssue?.fix).toBe(
-        'Update your opencode.json plugin entry: "oh-my-opencode" → "oh-my-openagent"'
+        'Update your opencode.json plugin entry: "oh-my-opencode" → "@kenanlian/opencode-agent-orchestrator"'
       )
     })
 
@@ -166,7 +166,7 @@ describe("system check", () => {
       const legacyEntryIssue = result.issues.find((issue) => issue.title === "Using legacy package name")
       expect(legacyEntryIssue?.severity).toBe("warning")
       expect(legacyEntryIssue?.fix).toBe(
-        'Update your opencode.json plugin entry: "oh-my-opencode@3.0.0" → "oh-my-openagent@3.0.0"'
+        'Update your opencode.json plugin entry: "oh-my-opencode@3.0.0" → "@kenanlian/opencode-agent-orchestrator@3.0.0"'
       )
     })
 

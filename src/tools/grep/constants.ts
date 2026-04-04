@@ -106,12 +106,12 @@ export async function resolveGrepCliWithAutoInstall(): Promise<ResolvedCli> {
     return cachedCli
   } catch (error) {
     if (current.backend === "grep") {
-      log("[oh-my-opencode] Failed to auto-install ripgrep. Falling back to GNU grep.", {
+      log("[opencode-agent-orchestrator] Failed to auto-install ripgrep. Falling back to GNU grep.", {
         error: error instanceof Error ? error.message : String(error),
         grep_path: current.path,
       })
     } else {
-      log("[oh-my-opencode] Failed to auto-install ripgrep and GNU grep was not found.", {
+      log("[opencode-agent-orchestrator] Failed to auto-install ripgrep and GNU grep was not found.", {
         error: error instanceof Error ? error.message : String(error),
       })
     }
