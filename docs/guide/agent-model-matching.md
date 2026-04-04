@@ -8,7 +8,7 @@ Think of AI models as developers on a team. Each has a different brain, differen
 
 This isn't a bug. It's the foundation of the entire system.
 
-Oh My OpenAgent assigns each agent a model that matches its _working style_ — like building a team where each person is in the role that fits their personality.
+OpenCode Agent Orchestrator assigns each agent a model that matches its _working style_ — like building a team where each person is in the role that fits their personality.
 
 ### Sisyphus: The Sociable Lead
 
@@ -188,7 +188,7 @@ See the [Orchestration System Guide](./orchestration.md) for how agents dispatch
 
 ```jsonc
 {
-  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
+  "$schema": "https://raw.githubusercontent.com/kenanlian/opencode-agent-orchestrator/dev/assets/opencode-agent-orchestrator.schema.json",
 
   "agents": {
     // Main orchestrator: Claude Opus or Kimi K2.5 work best
@@ -264,9 +264,9 @@ Your explicit configuration always wins. If you set a specific model for an agen
 
 Variant and `reasoningEffort` overrides are normalized to model-supported values, so cross-provider overrides degrade gracefully instead of failing hard.
 
-Model capabilities are models.dev-backed, with a refreshable cache and capability diagnostics. Use `bunx oh-my-opencode refresh-model-capabilities` to update the cache, or configure `model_capabilities.auto_refresh_on_start` to refresh at startup.
+Model capabilities are models.dev-backed, with a refreshable cache and capability diagnostics. Use `bunx @kenanlian/opencode-agent-orchestrator refresh-model-capabilities` to update the cache, or configure `model_capabilities.auto_refresh_on_start` to refresh at startup.
 
-To see which models your agents will actually use, run `bunx oh-my-opencode doctor`. This shows effective model resolution based on your current authentication and config.
+To see which models your agents will actually use, run `bunx @kenanlian/opencode-agent-orchestrator doctor`. This shows effective model resolution based on your current authentication and config.
 
 ```
 Agent Request → User Override (if configured) → Fallback Chain → System Default

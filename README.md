@@ -1,7 +1,7 @@
 > [!TIP]
 > **Building in Public**
 >
-> The maintainer builds and maintains oh-my-opencode in real-time with Jobdori, an AI assistant built on a heavily customized fork of OpenClaw.
+> The maintainer builds and maintains OpenCode Agent Orchestrator in real-time with Jobdori, an AI assistant built on a heavily customized fork of OpenClaw.
 > Every feature, every fix, every issue triage — live in our Discord.
 >
 > [![Building in Public](./.github/assets/building-in-public.png)](https://discord.gg/PUwSMR9XNk)
@@ -16,18 +16,18 @@
 > [!TIP]
 > Be with us!
 >
-> | [<img alt="Discord link" src="https://img.shields.io/discord/1452487457085063218?color=5865F2&label=discord&labelColor=black&logo=discord&logoColor=white&style=flat-square" width="156px" />](https://discord.gg/PUwSMR9XNk) | Join our [Discord community](https://discord.gg/PUwSMR9XNk) to connect with contributors and fellow `oh-my-opencode` users. |
+> | [<img alt="Discord link" src="https://img.shields.io/discord/1452487457085063218?color=5865F2&label=discord&labelColor=black&logo=discord&logoColor=white&style=flat-square" width="156px" />](https://discord.gg/PUwSMR9XNk) | Join our [Discord community](https://discord.gg/PUwSMR9XNk) to connect with contributors and fellow OpenCode Agent Orchestrator users. |
 > | :-----| :----- |
-> | [<img alt="X link" src="https://img.shields.io/badge/Follow-%40justsisyphus-00CED1?style=flat-square&logo=x&labelColor=black" width="156px" />](https://x.com/justsisyphus) | News and updates for `oh-my-opencode` used to be posted on my X account. <br /> Since it was suspended mistakenly, [@justsisyphus](https://x.com/justsisyphus) now posts updates on my behalf. |
+> | [<img alt="X link" src="https://img.shields.io/badge/Follow-%40justsisyphus-00CED1?style=flat-square&logo=x&labelColor=black" width="156px" />](https://x.com/justsisyphus) | News and updates for OpenCode Agent Orchestrator used to be posted on my X account. <br /> Since it was suspended mistakenly, [@justsisyphus](https://x.com/justsisyphus) now posts updates on my behalf. |
 > | [<img alt="GitHub Follow" src="https://img.shields.io/github/followers/code-yeongyu?style=flat-square&logo=github&labelColor=black&color=24292f" width="156px" />](https://github.com/code-yeongyu) | Follow [@code-yeongyu](https://github.com/code-yeongyu) on GitHub for more projects. |
 
 <!-- <CENTERED SECTION FOR GITHUB DISPLAY> -->
 
 <div align="center">
 
-[![Oh My OpenCode](./.github/assets/hero.jpg)](https://github.com/code-yeongyu/oh-my-openagent#oh-my-opencode)
+[![Oh My OpenCode](./.github/assets/hero.jpg)](https://github.com/kenanlian/opencode-agent-orchestrator)
 
-[![Preview](./.github/assets/omo.png)](https://github.com/code-yeongyu/oh-my-openagent#oh-my-opencode)
+[![Preview](./.github/assets/omo.png)](https://github.com/kenanlian/opencode-agent-orchestrator)
 
 
 </div>
@@ -40,14 +40,14 @@
 
 <div align="center">
 
-[![GitHub Release](https://img.shields.io/github/v/release/code-yeongyu/oh-my-openagent?color=369eff&labelColor=black&logo=github&style=flat-square)](https://github.com/code-yeongyu/oh-my-openagent/releases)
-[![npm downloads](https://img.shields.io/endpoint?url=https%3A%2F%2Fohmyopenagent.com%2Fapi%2Fnpm-downloads&style=flat-square)](https://www.npmjs.com/package/oh-my-opencode)
-[![GitHub Contributors](https://img.shields.io/github/contributors/code-yeongyu/oh-my-openagent?color=c4f042&labelColor=black&style=flat-square)](https://github.com/code-yeongyu/oh-my-openagent/graphs/contributors)
-[![GitHub Forks](https://img.shields.io/github/forks/code-yeongyu/oh-my-openagent?color=8ae8ff&labelColor=black&style=flat-square)](https://github.com/code-yeongyu/oh-my-openagent/network/members)
-[![GitHub Stars](https://img.shields.io/github/stars/code-yeongyu/oh-my-openagent?color=ffcb47&labelColor=black&style=flat-square)](https://github.com/code-yeongyu/oh-my-openagent/stargazers)
-[![GitHub Issues](https://img.shields.io/github/issues/code-yeongyu/oh-my-openagent?color=ff80eb&labelColor=black&style=flat-square)](https://github.com/code-yeongyu/oh-my-openagent/issues)
-[![License](https://img.shields.io/badge/license-SUL--1.0-white?labelColor=black&style=flat-square)](https://github.com/code-yeongyu/oh-my-openagent/blob/dev/LICENSE.md)
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/code-yeongyu/oh-my-openagent)
+[![GitHub Release](https://img.shields.io/github/v/release/kenanlian/opencode-agent-orchestrator?color=369eff&labelColor=black&logo=github&style=flat-square)](https://github.com/kenanlian/opencode-agent-orchestrator/releases)
+[![npm downloads](https://img.shields.io/npm/dm/%40kenanlian%2Fopencode-agent-orchestrator?style=flat-square)](https://www.npmjs.com/package/@kenanlian/opencode-agent-orchestrator)
+[![GitHub Contributors](https://img.shields.io/github/contributors/kenanlian/opencode-agent-orchestrator?color=c4f042&labelColor=black&style=flat-square)](https://github.com/kenanlian/opencode-agent-orchestrator/graphs/contributors)
+[![GitHub Forks](https://img.shields.io/github/forks/kenanlian/opencode-agent-orchestrator?color=8ae8ff&labelColor=black&style=flat-square)](https://github.com/kenanlian/opencode-agent-orchestrator/network/members)
+[![GitHub Stars](https://img.shields.io/github/stars/kenanlian/opencode-agent-orchestrator?color=ffcb47&labelColor=black&style=flat-square)](https://github.com/kenanlian/opencode-agent-orchestrator/stargazers)
+[![GitHub Issues](https://img.shields.io/github/issues/kenanlian/opencode-agent-orchestrator?color=ff80eb&labelColor=black&style=flat-square)](https://github.com/kenanlian/opencode-agent-orchestrator/issues)
+[![License](https://img.shields.io/badge/license-SUL--1.0-white?labelColor=black&style=flat-square)](https://github.com/kenanlian/opencode-agent-orchestrator/blob/dev/LICENSE.md)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/kenanlian/opencode-agent-orchestrator)
 
 [English](README.md) | [한국어](README.ko.md) | [日本語](README.ja.md) | [简体中文](README.zh-cn.md)
 
@@ -81,13 +81,13 @@
 
 ---
 
-# Oh My OpenCode
+# OpenCode Agent Orchestrator
 
 You're juggling Claude Code, Codex, random OSS models. Configuring workflows. Debugging agents.
 
 We did the work. Tested everything. Kept what actually shipped.
 
-Install OmO. Type `ultrawork`. Done.
+Install OpenCode Agent Orchestrator. Type `ultrawork`. Done.
 
 
 ## Installation
@@ -97,8 +97,8 @@ Install OmO. Type `ultrawork`. Done.
 Copy and paste this prompt to your LLM agent (Claude Code, AmpCode, Cursor, etc.):
 
 ```
-Install and configure oh-my-opencode by following the instructions here:
-https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/refs/heads/dev/docs/guide/installation.md
+Install and configure OpenCode Agent Orchestrator by following the instructions here:
+https://raw.githubusercontent.com/kenanlian/opencode-agent-orchestrator/refs/heads/dev/docs/guide/installation.md
 ```
 
 Or read the [Installation Guide](docs/guide/installation.md), but seriously, let an agent do it. Humans fat-finger configs.
@@ -108,10 +108,12 @@ Or read the [Installation Guide](docs/guide/installation.md), but seriously, let
 Fetch the installation guide and follow it:
 
 ```bash
-curl -s https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/refs/heads/dev/docs/guide/installation.md
+curl -s https://raw.githubusercontent.com/kenanlian/opencode-agent-orchestrator/refs/heads/dev/docs/guide/installation.md
 ```
 
-**Note**: Use the published package and binary name `oh-my-opencode`. Inside `opencode.json`, the compatibility layer now prefers the plugin entry `oh-my-openagent`, while legacy `oh-my-opencode` entries still load with a warning. Plugin config files still commonly use `oh-my-opencode.json` or `oh-my-opencode.jsonc`, and both legacy and renamed basenames are recognized during the transition.
+**Note**: Canonical install and plugin entry are `@kenanlian/opencode-agent-orchestrator`. CLI command is `opencode-agent-orchestrator` (alias: `oao`). Canonical config basename is `opencode-agent-orchestrator.json[c]`. Legacy `oh-my-opencode` names are migration inputs only.
+
+See the short migration note: [docs/guide/migration-to-scoped-package.md](docs/guide/migration-to-scoped-package.md).
 
 ---
 
@@ -120,7 +122,7 @@ curl -s https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/refs/head
 We're past the era of reading docs. Just paste this into your agent:
 
 ```
-Read this and tell me why it's not just another boilerplate: https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/refs/heads/dev/README.md
+Read this and tell me why it's not just another boilerplate: https://raw.githubusercontent.com/kenanlian/opencode-agent-orchestrator/refs/heads/dev/README.md
 ```
 
 ## Highlights
@@ -267,19 +269,19 @@ Add your own: `.opencode/skills/*/SKILL.md` or `~/.config/opencode/skills/*/SKIL
 
 ---
 
-> **New to oh-my-opencode?** Read the **[Overview](docs/guide/overview.md)** to understand what you have, or check the **[Orchestration Guide](docs/guide/orchestration.md)** for how agents collaborate.
+> **New to OpenCode Agent Orchestrator?** Read the **[Overview](docs/guide/overview.md)** to understand what you have, or check the **[Orchestration Guide](docs/guide/orchestration.md)** for how agents collaborate.
 
 ## Uninstallation
 
-To remove oh-my-opencode:
+To remove OpenCode Agent Orchestrator:
 
 1. **Remove the plugin from your OpenCode config**
 
-   Edit `~/.config/opencode/opencode.json` (or `opencode.jsonc`) and remove either `"oh-my-openagent"` or the legacy `"oh-my-opencode"` entry from the `plugin` array:
+   Edit `~/.config/opencode/opencode.json` (or `opencode.jsonc`) and remove either `"@kenanlian/opencode-agent-orchestrator"` or the legacy `"oh-my-opencode"` entry from the `plugin` array:
 
    ```bash
    # Using jq
-   jq '.plugin = [.plugin[] | select(. != "oh-my-openagent" and . != "oh-my-opencode")]' \
+   jq '.plugin = [.plugin[] | select(. != "@kenanlian/opencode-agent-orchestrator" and . != "oh-my-opencode")]' \
        ~/.config/opencode/opencode.json > /tmp/oc.json && \
        mv /tmp/oc.json ~/.config/opencode/opencode.json
    ```
@@ -288,11 +290,11 @@ To remove oh-my-opencode:
 
    ```bash
    # Remove plugin config files recognized during the compatibility window
-   rm -f ~/.config/opencode/oh-my-openagent.jsonc ~/.config/opencode/oh-my-openagent.json \
+   rm -f ~/.config/opencode/opencode-agent-orchestrator.jsonc ~/.config/opencode/opencode-agent-orchestrator.json \
          ~/.config/opencode/oh-my-opencode.jsonc ~/.config/opencode/oh-my-opencode.json
 
    # Remove project config (if exists)
-   rm -f .opencode/oh-my-openagent.jsonc .opencode/oh-my-openagent.json \
+   rm -f .opencode/opencode-agent-orchestrator.jsonc .opencode/opencode-agent-orchestrator.json \
          .opencode/oh-my-opencode.jsonc .opencode/oh-my-opencode.json
    ```
 
@@ -319,7 +321,7 @@ See full [Features Documentation](docs/reference/features.md).
 - **Built-in MCPs**: websearch (Exa), context7 (docs), grep_app (GitHub search)
 - **Session Tools**: List, read, search, and analyze session history
 - **Productivity Features**: Ralph Loop, Todo Enforcer, Comment Checker, Think Mode, and more
-- **Doctor Command**: Built-in diagnostics (`bunx oh-my-opencode doctor`) verify plugin registration, config, models, and environment
+- **Doctor Command**: Built-in diagnostics (`bunx @kenanlian/opencode-agent-orchestrator doctor`) verify plugin registration, config, models, and environment
 - **Model Fallbacks**: `fallback_models` can mix plain model strings with per-fallback object settings in the same array
 - **File Prompts**: Load prompts from files with `file://` support in agent configurations
 - **Session Recovery**: Automatic recovery from session errors, context window limits, and API failures
@@ -332,7 +334,7 @@ Opinionated defaults, adjustable if you insist.
 See [Configuration Documentation](docs/reference/configuration.md).
 
 **Quick Overview:**
-- **Config Locations**: The compatibility layer recognizes both `oh-my-openagent.json[c]` and legacy `oh-my-opencode.json[c]` plugin config files. Existing installs still commonly use the legacy basename.
+- **Config Locations**: Canonical plugin config is `opencode-agent-orchestrator.json[c]`; legacy `oh-my-opencode.json[c]` is migration input only.
 - **JSONC Support**: Comments and trailing commas supported
 - **Agents**: Override models, temperatures, prompts, and permissions for any agent
 - **Built-in Skills**: `playwright` (browser automation), `git-master` (atomic commits)

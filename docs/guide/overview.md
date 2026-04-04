@@ -1,6 +1,6 @@
-# What Is Oh My OpenAgent?
+# What Is OpenCode Agent Orchestrator?
 
-Oh My OpenAgent is a multi-model agent orchestration harness for OpenCode. It transforms a single AI agent into a coordinated development team that actually ships code.
+OpenCode Agent Orchestrator is a multi-model agent orchestration harness for OpenCode. It transforms a single AI agent into a coordinated development team that actually ships code.
 
 Not locked to Claude. Not locked to OpenAI. Not locked to anyone.
 
@@ -15,8 +15,8 @@ Just better results, cheaper models, real orchestration.
 Paste this into your LLM agent session:
 
 ```
-Install and configure oh-my-openagent by following the instructions here:
-https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/refs/heads/dev/docs/guide/installation.md
+Install and configure OpenCode Agent Orchestrator by following the instructions here:
+https://raw.githubusercontent.com/kenanlian/opencode-agent-orchestrator/refs/heads/dev/docs/guide/installation.md
 ```
 
 Or read the full [Installation Guide](./installation.md) for manual setup, provider authentication, and troubleshooting.
@@ -41,13 +41,13 @@ We used to call this "Claude Code on steroids." That was wrong.
 
 This isn't about making Claude Code better. It's about breaking free from the idea that one model, one provider, one way of working is enough. Anthropic wants you locked in. OpenAI wants you locked in. Everyone wants you locked in.
 
-Oh My OpenAgent doesn't play that game. It orchestrates across models, picking the right brain for the right job. Claude for orchestration. GPT for deep reasoning. Gemini for frontend. GPT-5.4 Mini for quick tasks. All working together, automatically.
+OpenCode Agent Orchestrator doesn't play that game. It orchestrates across models, picking the right brain for the right job. Claude for orchestration. GPT for deep reasoning. Gemini for frontend. GPT-5.4 Mini for quick tasks. All working together, automatically.
 
 ---
 
 ## How It Works: Agent Orchestration
 
-Instead of one agent doing everything, Oh My OpenAgent uses **specialized agents that delegate to each other** based on task type.
+Instead of one agent doing everything, OpenCode Agent Orchestrator uses **specialized agents that delegate to each other** based on task type.
 
 **The Architecture:**
 
@@ -154,7 +154,7 @@ Use Prometheus for multi-day projects, critical production changes, complex refa
 
 ## Agent Model Matching
 
-Different agents work best with different models. Oh My OpenAgent automatically assigns optimal models, but you can customize everything.
+Different agents work best with different models. OpenCode Agent Orchestrator automatically assigns optimal models, but you can customize everything.
 
 ### Default Configuration
 
@@ -168,7 +168,7 @@ You can override specific agents or categories in your config:
 
 ```jsonc
 {
-  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-openagent.schema.json",
+  "$schema": "https://raw.githubusercontent.com/kenanlian/opencode-agent-orchestrator/dev/assets/opencode-agent-orchestrator.schema.json",
 
   "agents": {
     // Main orchestrator: Claude Opus or Kimi K2.5 work best

@@ -1,6 +1,6 @@
 # Contributing to Oh My OpenCode
 
-First off, thanks for taking the time to contribute! This document provides guidelines and instructions for contributing to oh-my-opencode.
+First off, thanks for taking the time to contribute! This document provides guidelines and instructions for contributing to OpenCode Agent Orchestrator.
 
 ## Table of Contents
 
@@ -63,8 +63,8 @@ If English isn't your first language, don't worry! We value your contributions r
 
 ```bash
 # Clone the repository
-git clone https://github.com/code-yeongyu/oh-my-openagent.git
-cd oh-my-openagent
+git clone https://github.com/kenanlian/opencode-agent-orchestrator.git
+cd opencode-agent-orchestrator
 
 # Install dependencies (bun only - never use npm/yarn)
 bun install
@@ -87,19 +87,19 @@ After making changes, you can test your local build in OpenCode:
 
    ```json
    {
-     "plugin": ["file:///absolute/path/to/oh-my-opencode/dist/index.js"]
+     "plugin": ["file:///absolute/path/to/opencode-agent-orchestrator/dist/index.js"]
    }
    ```
 
-   For example, if your project is at `/Users/yourname/projects/oh-my-opencode`:
+   For example, if your project is at `/Users/yourname/projects/opencode-agent-orchestrator`:
 
    ```json
    {
-     "plugin": ["file:///Users/yourname/projects/oh-my-opencode/dist/index.js"]
+     "plugin": ["file:///Users/yourname/projects/opencode-agent-orchestrator/dist/index.js"]
    }
    ```
 
-   > **Note**: Remove `"oh-my-opencode"` from the plugin array if it exists, to avoid conflicts with the npm version.
+   > **Note**: Remove legacy plugin entries such as `"oh-my-opencode"` if they exist, to avoid conflicts with the scoped npm package.
 
 3. **Restart OpenCode** to load the changes.
 
@@ -108,7 +108,7 @@ After making changes, you can test your local build in OpenCode:
 ## Project Structure
 
 ```
-oh-my-opencode/
+opencode-agent-orchestrator/
 ├── src/
 │   ├── index.ts         # Plugin entry (OhMyOpenCodePlugin)
 │   ├── plugin-config.ts # JSONC multi-level config (Zod v4)

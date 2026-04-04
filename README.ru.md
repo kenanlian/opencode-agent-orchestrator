@@ -7,7 +7,7 @@
 > [!TIP]
 > **Building in Public**
 >
-> Мейнтейнер разрабатывает и поддерживает oh-my-opencode в режиме реального времени с помощью Jobdori — ИИ-ассистента на базе глубоко кастомизированной версии OpenClaw.
+> Мейнтейнер разрабатывает и поддерживает OpenCode Agent Orchestrator в режиме реального времени с помощью Jobdori — ИИ-ассистента на базе глубоко кастомизированной версии OpenClaw.
 > Каждая фича, каждый фикс, каждый триаж issue — в прямом эфире в нашем Discord.
 >
 > [![Building in Public](./.github/assets/building-in-public.png)](https://discord.gg/PUwSMR9XNk)
@@ -23,16 +23,16 @@
 
 > [!TIP] Будьте с нами!
 >
-> | [](https://discord.gg/PUwSMR9XNk)   | Вступайте в наш [Discord](https://discord.gg/PUwSMR9XNk), чтобы общаться с контрибьюторами и пользователями `oh-my-opencode`. |
+> | [](https://discord.gg/PUwSMR9XNk)   | Вступайте в наш [Discord](https://discord.gg/PUwSMR9XNk), чтобы общаться с контрибьюторами и пользователями OpenCode Agent Orchestrator. |
 > | ----------------------------------- | ------------------------------------------------------------ |
-> | [](https://x.com/justsisyphus)      | Новости и обновления `oh-my-opencode` раньше публиковались на моём аккаунте X. <br /> После ошибочной блокировки, [@justsisyphus](https://x.com/justsisyphus) публикует обновления вместо меня. |
+> | [](https://x.com/justsisyphus)      | Новости и обновления OpenCode Agent Orchestrator раньше публиковались на моём аккаунте X. <br /> После ошибочной блокировки, [@justsisyphus](https://x.com/justsisyphus) публикует обновления вместо меня. |
 > | [](https://github.com/code-yeongyu) | Подпишитесь на [@code-yeongyu](https://github.com/code-yeongyu) на GitHub, чтобы следить за другими проектами. |
 
 <!-- <CENTERED SECTION FOR GITHUB DISPLAY> --> <div align="center">
 
-[![Oh My OpenCode](./.github/assets/hero.jpg)](https://github.com/code-yeongyu/oh-my-openagent#oh-my-opencode)
+[![Oh My OpenCode](./.github/assets/hero.jpg)](https://github.com/kenanlian/opencode-agent-orchestrator)
 
-[![Preview](./.github/assets/omo.png)](https://github.com/code-yeongyu/oh-my-openagent#oh-my-opencode)
+[![Preview](./.github/assets/omo.png)](https://github.com/kenanlian/opencode-agent-orchestrator)
 
 </div>
 
@@ -42,7 +42,7 @@
 
 <div align="center">
 
-[![GitHub Release](https://img.shields.io/github/v/release/code-yeongyu/oh-my-openagent?color=369eff&labelColor=black&logo=github&style=flat-square)](https://github.com/code-yeongyu/oh-my-openagent/releases) [![npm downloads](https://img.shields.io/npm/dt/oh-my-opencode?color=ff6b35&labelColor=black&style=flat-square)](https://www.npmjs.com/package/oh-my-opencode) [![GitHub Contributors](https://img.shields.io/github/contributors/code-yeongyu/oh-my-openagent?color=c4f042&labelColor=black&style=flat-square)](https://github.com/code-yeongyu/oh-my-openagent/graphs/contributors) [![GitHub Forks](https://img.shields.io/github/forks/code-yeongyu/oh-my-openagent?color=8ae8ff&labelColor=black&style=flat-square)](https://github.com/code-yeongyu/oh-my-openagent/network/members) [![GitHub Stars](https://img.shields.io/github/stars/code-yeongyu/oh-my-openagent?color=ffcb47&labelColor=black&style=flat-square)](https://github.com/code-yeongyu/oh-my-openagent/stargazers) [![GitHub Issues](https://img.shields.io/github/issues/code-yeongyu/oh-my-openagent?color=ff80eb&labelColor=black&style=flat-square)](https://github.com/code-yeongyu/oh-my-openagent/issues) [![License](https://img.shields.io/badge/license-SUL--1.0-white?labelColor=black&style=flat-square)](https://github.com/code-yeongyu/oh-my-openagent/blob/master/LICENSE.md) [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/code-yeongyu/oh-my-openagent)
+[![GitHub Release](https://img.shields.io/github/v/release/kenanlian/opencode-agent-orchestrator?color=369eff&labelColor=black&logo=github&style=flat-square)](https://github.com/kenanlian/opencode-agent-orchestrator/releases) [![npm downloads](https://img.shields.io/npm/dm/%40kenanlian%2Fopencode-agent-orchestrator?color=ff6b35&labelColor=black&style=flat-square)](https://www.npmjs.com/package/@kenanlian/opencode-agent-orchestrator) [![GitHub Contributors](https://img.shields.io/github/contributors/kenanlian/opencode-agent-orchestrator?color=c4f042&labelColor=black&style=flat-square)](https://github.com/kenanlian/opencode-agent-orchestrator/graphs/contributors) [![GitHub Forks](https://img.shields.io/github/forks/kenanlian/opencode-agent-orchestrator?color=8ae8ff&labelColor=black&style=flat-square)](https://github.com/kenanlian/opencode-agent-orchestrator/network/members) [![GitHub Stars](https://img.shields.io/github/stars/kenanlian/opencode-agent-orchestrator?color=ffcb47&labelColor=black&style=flat-square)](https://github.com/kenanlian/opencode-agent-orchestrator/stargazers) [![GitHub Issues](https://img.shields.io/github/issues/kenanlian/opencode-agent-orchestrator?color=ff80eb&labelColor=black&style=flat-square)](https://github.com/kenanlian/opencode-agent-orchestrator/issues) [![License](https://img.shields.io/badge/license-SUL--1.0-white?labelColor=black&style=flat-square)](https://github.com/kenanlian/opencode-agent-orchestrator/blob/dev/LICENSE.md) [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/kenanlian/opencode-agent-orchestrator)
 
 English | 한국어 | 日本語 | 简体中文 | Русский
 
@@ -87,8 +87,8 @@ English | 한국어 | 日本語 | 简体中文 | Русский
 Скопируйте и вставьте этот промпт в ваш LLM-агент (Claude Code, AmpCode, Cursor и т.д.):
 
 ```
-Install and configure oh-my-opencode by following the instructions here:
-https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/refs/heads/dev/docs/guide/installation.md
+Install and configure OpenCode Agent Orchestrator by following the instructions here:
+https://raw.githubusercontent.com/kenanlian/opencode-agent-orchestrator/refs/heads/dev/docs/guide/installation.md
 ```
 
 Или прочитайте руководство по установке, но серьёзно — пусть агент сделает это за вас. Люди ошибаются в конфигах.
@@ -98,7 +98,7 @@ https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/refs/heads/dev/do
 Загрузите руководство по установке и следуйте ему:
 
 ```bash
-curl -s https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/refs/heads/dev/docs/guide/installation.md
+curl -s https://raw.githubusercontent.com/kenanlian/opencode-agent-orchestrator/refs/heads/dev/docs/guide/installation.md
 ```
 
 ------
@@ -108,7 +108,7 @@ curl -s https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/refs/head
 Мы вышли за пределы эпохи чтения документации. Просто вставьте это в своего агента:
 
 ```
-Read this and tell me why it's not just another boilerplate: https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/refs/heads/dev/README.md
+Read this and tell me why it's not just another boilerplate: https://raw.githubusercontent.com/kenanlian/opencode-agent-orchestrator/refs/heads/dev/README.md
 ```
 
 ## Ключевые возможности
@@ -253,19 +253,19 @@ project/
 
 ------
 
-> **Впервые в oh-my-opencode?** Прочитайте **Обзор**, чтобы понять, что у вас есть, или ознакомьтесь с **руководством по оркестрации**, чтобы узнать, как агенты взаимодействуют.
+> **Впервые в OpenCode Agent Orchestrator?** Прочитайте **Обзор**, чтобы понять, что у вас есть, или ознакомьтесь с **руководством по оркестрации**, чтобы узнать, как агенты взаимодействуют.
 
 ## Удаление
 
-Чтобы удалить oh-my-opencode:
+Чтобы удалить OpenCode Agent Orchestrator:
 
 1. **Удалите плагин из конфига OpenCode**
 
-   Отредактируйте `~/.config/opencode/opencode.json` (или `opencode.jsonc`) и уберите `"oh-my-opencode"` из массива `plugin`:
+   Отредактируйте `~/.config/opencode/opencode.json` (или `opencode.jsonc`) и уберите `"@kenanlian/opencode-agent-orchestrator"` и устаревший `"oh-my-opencode"` из массива `plugin`:
 
    ```bash
    # С помощью jq
-   jq '.plugin = [.plugin[] | select(. != "oh-my-opencode")]' \
+   jq '.plugin = [.plugin[] | select(. != "@kenanlian/opencode-agent-orchestrator" and . != "oh-my-opencode")]' \
        ~/.config/opencode/opencode.json > /tmp/oc.json && \
        mv /tmp/oc.json ~/.config/opencode/opencode.json
    ```
@@ -274,10 +274,12 @@ project/
 
    ```bash
    # Удалить пользовательский конфиг
-   rm -f ~/.config/opencode/oh-my-opencode.json ~/.config/opencode/oh-my-opencode.jsonc
+   rm -f ~/.config/opencode/opencode-agent-orchestrator.json ~/.config/opencode/opencode-agent-orchestrator.jsonc \
+         ~/.config/opencode/oh-my-opencode.json ~/.config/opencode/oh-my-opencode.jsonc
 
    # Удалить конфиг проекта (если существует)
-   rm -f .opencode/oh-my-opencode.json .opencode/oh-my-opencode.jsonc
+   rm -f .opencode/opencode-agent-orchestrator.json .opencode/opencode-agent-orchestrator.jsonc \
+         .opencode/oh-my-opencode.json .opencode/oh-my-opencode.jsonc
    ```
 
 3. **Проверьте удаление**
@@ -314,7 +316,7 @@ project/
 
 **Краткий обзор:**
 
-- **Расположение конфигов**: `.opencode/oh-my-opencode.jsonc` или `.opencode/oh-my-opencode.json` (проект), `~/.config/opencode/oh-my-opencode.jsonc` или `~/.config/opencode/oh-my-opencode.json` (пользователь)
+- **Расположение конфигов**: каноническое имя — `opencode-agent-orchestrator.json[c]`; устаревшие `oh-my-opencode.json[c]` используются только как вход для миграции
 - **Поддержка JSONC**: Комментарии и конечные запятые поддерживаются
 - **Агенты**: Переопределение моделей, температур, промптов и разрешений для любого агента
 - **Встроенные навыки**: `playwright` (автоматизация браузера), `git-master` (атомарные коммиты)
