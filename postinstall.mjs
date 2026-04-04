@@ -26,9 +26,9 @@ function getLibcFamily() {
 function getPackageBaseName() {
   try {
     const packageJson = JSON.parse(readFileSync(new URL("./package.json", import.meta.url), "utf8"));
-    return packageJson.name || "oh-my-opencode";
+    return packageJson.name || "@kenanlian/opencode-agent-orchestrator";
   } catch {
-    return "oh-my-opencode";
+    return "@kenanlian/opencode-agent-orchestrator";
   }
 }
 
@@ -60,9 +60,9 @@ function main() {
       );
     }
 
-    console.log(`✓ oh-my-opencode binary installed for ${platform}-${arch} (${resolvedPackage})`);
+    console.log(`✓ opencode-agent-orchestrator binary installed for ${platform}-${arch} (${resolvedPackage})`);
   } catch (error) {
-    console.warn(`⚠ oh-my-opencode: ${error.message}`);
+    console.warn(`⚠ opencode-agent-orchestrator: ${error.message}`);
     console.warn(`  The CLI may not work on this platform.`);
     // Don't fail installation - let user try anyway
   }

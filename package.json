@@ -1,12 +1,13 @@
 {
-  "name": "oh-my-opencode",
+  "name": "@kenanlian/opencode-agent-orchestrator",
   "version": "3.14.1",
   "description": "The Best AI Agent Harness - Batteries-Included OpenCode Plugin with Multi-Model Orchestration, Parallel Background Agents, and Crafted LSP/AST Tools",
   "main": "./dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
   "bin": {
-    "oh-my-opencode": "bin/oh-my-opencode.js"
+    "opencode-agent-orchestrator": "bin/opencode-agent-orchestrator.js",
+    "oao": "bin/opencode-agent-orchestrator.js"
   },
   "files": [
     "dist",
@@ -18,10 +19,10 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     },
-    "./schema.json": "./dist/oh-my-opencode.schema.json"
+    "./schema.json": "./dist/opencode-agent-orchestrator.schema.json"
   },
   "scripts": {
-    "build": "bun build src/index.ts --outdir dist --target bun --format esm --external @ast-grep/napi && tsc --emitDeclarationOnly && bun build src/cli/index.ts --outdir dist/cli --target bun --format esm --external @ast-grep/napi && bun run build:schema",
+    "build": "bun run clean && bun build src/index.ts --outdir dist --target bun --format esm --external @ast-grep/napi && tsc --emitDeclarationOnly && bun build src/cli/index.ts --outdir dist/cli --target bun --format esm --external @ast-grep/napi && bun run build:schema",
     "build:all": "bun run build && bun run build:binaries",
     "build:binaries": "bun run script/build-binaries.ts",
     "build:schema": "bun run script/build-schema.ts",
@@ -47,12 +48,15 @@
   "license": "SUL-1.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/code-yeongyu/oh-my-openagent.git"
+    "url": "git+https://github.com/kenanlian/opencode-agent-orchestrator.git"
   },
   "bugs": {
-    "url": "https://github.com/code-yeongyu/oh-my-openagent/issues"
+    "url": "https://github.com/kenanlian/opencode-agent-orchestrator/issues"
   },
-  "homepage": "https://github.com/code-yeongyu/oh-my-openagent#readme",
+  "homepage": "https://github.com/kenanlian/opencode-agent-orchestrator#readme",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@ast-grep/cli": "^0.41.1",
     "@ast-grep/napi": "^0.41.1",
@@ -78,17 +82,17 @@
     "typescript": "^5.7.3"
   },
   "optionalDependencies": {
-    "oh-my-opencode-darwin-arm64": "3.14.0",
-    "oh-my-opencode-darwin-x64": "3.14.0",
-    "oh-my-opencode-darwin-x64-baseline": "3.14.0",
-    "oh-my-opencode-linux-arm64": "3.14.0",
-    "oh-my-opencode-linux-arm64-musl": "3.14.0",
-    "oh-my-opencode-linux-x64": "3.14.0",
-    "oh-my-opencode-linux-x64-baseline": "3.14.0",
-    "oh-my-opencode-linux-x64-musl": "3.14.0",
-    "oh-my-opencode-linux-x64-musl-baseline": "3.14.0",
-    "oh-my-opencode-windows-x64": "3.14.0",
-    "oh-my-opencode-windows-x64-baseline": "3.14.0"
+    "@kenanlian/opencode-agent-orchestrator-darwin-arm64": "3.14.0",
+    "@kenanlian/opencode-agent-orchestrator-darwin-x64": "3.14.0",
+    "@kenanlian/opencode-agent-orchestrator-darwin-x64-baseline": "3.14.0",
+    "@kenanlian/opencode-agent-orchestrator-linux-arm64": "3.14.0",
+    "@kenanlian/opencode-agent-orchestrator-linux-arm64-musl": "3.14.0",
+    "@kenanlian/opencode-agent-orchestrator-linux-x64": "3.14.0",
+    "@kenanlian/opencode-agent-orchestrator-linux-x64-baseline": "3.14.0",
+    "@kenanlian/opencode-agent-orchestrator-linux-x64-musl": "3.14.0",
+    "@kenanlian/opencode-agent-orchestrator-linux-x64-musl-baseline": "3.14.0",
+    "@kenanlian/opencode-agent-orchestrator-windows-x64": "3.14.0",
+    "@kenanlian/opencode-agent-orchestrator-windows-x64-baseline": "3.14.0"
   },
   "overrides": {
     "@opencode-ai/sdk": "^1.2.24"

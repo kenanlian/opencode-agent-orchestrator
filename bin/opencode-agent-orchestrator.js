@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-// bin/oh-my-opencode.js
 // Wrapper script that detects platform and spawns the correct binary
 
 import { spawnSync } from "node:child_process";
@@ -32,7 +31,7 @@ function supportsAvx2() {
     return null;
   }
 
-  if (process.env.OH_MY_OPENCODE_FORCE_BASELINE === "1") {
+  if (process.env.OPENCODE_AGENT_ORCHESTRATOR_FORCE_BASELINE === "1") {
     return false;
   }
 
@@ -74,9 +73,9 @@ function getSignalExitCode(signal) {
 function getPackageBaseName() {
   try {
     const packageJson = JSON.parse(readFileSync(new URL("../package.json", import.meta.url), "utf8"));
-    return packageJson.name || "oh-my-opencode";
+    return packageJson.name || "@kenanlian/opencode-agent-orchestrator";
   } catch {
-    return "oh-my-opencode";
+    return "@kenanlian/opencode-agent-orchestrator";
   }
 }
 
@@ -96,7 +95,7 @@ function main() {
       packageBaseName,
     });
   } catch (error) {
-    console.error(`\noh-my-opencode: ${error.message}\n`);
+    console.error(`\nopencode-agent-orchestrator: ${error.message}\n`);
     process.exit(1);
   }
 
@@ -111,7 +110,7 @@ function main() {
     .filter((entry) => entry !== null);
 
   if (resolvedBinaries.length === 0) {
-    console.error(`\noh-my-opencode: Platform binary not installed.`);
+    console.error(`\nopencode-agent-orchestrator: Platform binary not installed.`);
     console.error(`\nYour platform: ${platform}-${arch}${libcFamily === "musl" ? "-musl" : ""}`);
     console.error(`Expected packages (in order): ${packageCandidates.join(", ")}`);
     console.error(`\nTo fix, run:`);
@@ -131,7 +130,7 @@ function main() {
         continue;
       }
 
-      console.error(`\noh-my-opencode: Failed to execute binary.`);
+      console.error(`\nopencode-agent-orchestrator: Failed to execute binary.`);
       console.error(`Error: ${result.error.message}\n`);
       process.exit(2);
     }
