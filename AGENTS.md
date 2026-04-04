@@ -1,15 +1,15 @@
-# oh-my-opencode — O P E N C O D E Plugin
+# opencode-agent-orchestrator — O P E N C O D E Plugin
 
 **Generated:** 2026-03-06 | **Commit:** 7fe44024 | **Branch:** dev
 
 ## OVERVIEW
 
-OpenCode plugin (npm: `oh-my-opencode`) that extends Claude Code (OpenCode fork) with multi-agent orchestration, 48 lifecycle hooks, 26 tools, skill/command/MCP systems, and Claude Code compatibility. 1268 TypeScript files, 160k LOC.
+OpenCode plugin (npm: `@kenanlian/opencode-agent-orchestrator`) that extends Claude Code (OpenCode fork) with multi-agent orchestration, 48 lifecycle hooks, 26 tools, skill/command/MCP systems, and Claude Code compatibility. 1268 TypeScript files, 160k LOC.
 
 ## STRUCTURE
 
 ```
-oh-my-opencode/
+opencode-agent-orchestrator/
 ├── src/
 │   ├── index.ts              # Plugin entry: loadConfig → createManagers → createTools → createHooks → createPluginInterface
 │   ├── plugin-config.ts      # JSONC multi-level config: user → project → defaults (Zod v4)
@@ -23,14 +23,14 @@ oh-my-opencode/
 │   ├── mcp/                  # 3 built-in remote MCPs (websearch, context7, grep_app)
 │   ├── plugin/               # 8 OpenCode hook handlers + 48 hook composition
 │   └── plugin-handlers/      # 6-phase config loading pipeline
-├── packages/                 # Monorepo: cli-runner, 12 platform binaries
+├── packages/                 # Monorepo: cli-runner, 11 platform binaries
 └── local-ignore/             # Dev-only test fixtures
 ```
 
 ## INITIALIZATION FLOW
 
 ```
-OhMyOpenCodePlugin(ctx)
+OpenCodeAgentOrchestratorPlugin(ctx)
   ├─→ loadPluginConfig()         # JSONC parse → project/user merge → Zod validate → migrate
   ├─→ createManagers()           # TmuxSessionManager, BackgroundManager, SkillMcpManager, ConfigHandler
   ├─→ createTools()              # SkillContext + AvailableCategories + ToolRegistry (26 tools)
@@ -65,13 +65,13 @@ OhMyOpenCodePlugin(ctx)
 | Add new command | `src/features/builtin-commands/` | Template in templates/ |
 | Add new CLI command | `src/cli/cli-program.ts` | Commander.js subcommand |
 | Add new doctor check | `src/cli/doctor/checks/` | Register in checks/index.ts |
-| Modify config schema | `src/config/schema/` + update root schema | Zod v4, add to OhMyOpenCodeConfigSchema |
+| Modify config schema | `src/config/schema/` + update root schema | Zod v4, add to OpenCodeAgentOrchestratorConfigSchema |
 | Add new category | `src/tools/delegate-task/constants.ts` | DEFAULT_CATEGORIES + CATEGORY_MODEL_REQUIREMENTS |
 
 ## MULTI-LEVEL CONFIG
 
 ```
-Project (.opencode/oh-my-opencode.jsonc)  →  User (~/.config/opencode/oh-my-opencode.jsonc)  →  Defaults
+Project (.opencode/opencode-agent-orchestrator.jsonc)  →  User (~/.config/opencode/opencode-agent-orchestrator.jsonc)  →  Defaults
 ```
 
 - `agents`, `categories`, `claude_code`: deep merged recursively
@@ -128,25 +128,26 @@ bun test                    # Bun test suite
 bun run build              # Build plugin (ESM + declarations + schema)
 bun run build:all          # Build + platform binaries
 bun run typecheck           # tsc --noEmit
-bunx oh-my-opencode install # Interactive setup
-bunx oh-my-opencode doctor  # Health diagnostics
-bunx oh-my-opencode run     # Non-interactive session
+bunx @kenanlian/opencode-agent-orchestrator install # Interactive setup
+bunx @kenanlian/opencode-agent-orchestrator doctor  # Health diagnostics
+bunx @kenanlian/opencode-agent-orchestrator run     # Non-interactive session
 ```
 
 ## CI/CD
 
 | Workflow | Trigger | Purpose |
 |----------|---------|---------|
-| ci.yml | push/PR to master/dev | Tests (split: mock-heavy isolated + batch), typecheck, build, schema auto-commit |
-| publish.yml | manual dispatch | Version bump, npm publish, platform binaries, GitHub release, merge to master |
-| publish-platform.yml | called by publish | 12 platform binaries via bun compile (darwin/linux/windows) |
+| ci.yml | push/PR to dev | Tests (split: mock-heavy isolated + batch), typecheck, build, schema auto-commit |
+| publish.yml | manual dispatch from `dev` | Version bump, npm publish, platform binaries, GitHub release |
+| publish-platform.yml | called by publish | 11 platform binaries via bun compile (darwin/linux/windows) |
 | sisyphus-agent.yml | @mention / dispatch | AI agent handles issues/PRs |
 | cla.yml | issue_comment/PR | CLA assistant for contributors |
 | lint-workflows.yml | push to .github/ | actionlint + shellcheck on workflow files |
 
 ## NOTES
 
-- Logger writes to `/tmp/oh-my-opencode.log` — check there for debugging
+- Logger writes to `/tmp/opencode-agent-orchestrator.log` — check there for debugging
+- Legacy runtime paths are one-time migration inputs only: legacy config/plugin entry/log/cache names are auto-migrated to canonical `opencode-agent-orchestrator` identities during startup/install
 - Background tasks: 5 concurrent per model/provider (configurable)
 - Plugin load timeout: 10s for Claude Code plugins
 - Model fallback priority: Claude > OpenAI > Gemini > Copilot > OpenCode Zen > Z.ai > Kimi
